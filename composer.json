@@ -1,0 +1,29 @@
+{
+    "name": "xigemall/laravel-sso",
+    "description": "xigemall laravel-sso",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "1032380143",
+            "email": "1032380143@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Xigemall\\LaravelSso\\": "src/",
+            "Xigemall\\LaravelSso\\App\\": "src/app"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xigemall\\LaravelSso\\LaravelSsoServiceProvider",
+                "Xigemall\\LaravelSso\\CurlServiceProvider"
+            ],
+            "aliases": {
+              "Curl": "Xigemall\\LaravelSso\\App\\Facades\\Curl"
+            }
+        }
+    }
+}

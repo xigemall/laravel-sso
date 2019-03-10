@@ -8,6 +8,11 @@ use Xigemall\LaravelSso\App\Services\Curl;
 class CurlServiceProvider extends ServiceProvider
 {
     /**
+     * 是否延时加载提供器。
+     * @var bool
+     */
+    protected $defer = true;
+    /**
      * Bootstrap the application services.
      *
      * @return void
@@ -25,5 +30,14 @@ class CurlServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('curl',Curl::class);
+    }
+
+    /**
+     *  获取提供器提供的服务。
+     * @return array
+     */
+    public function provides()
+    {
+       return ['curl'];
     }
 }

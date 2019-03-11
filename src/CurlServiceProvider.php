@@ -3,7 +3,7 @@
 namespace Xigemall\LaravelSso;
 
 use Illuminate\Support\ServiceProvider;
-use Xigemall\LaravelSso\App\Services\Curl;
+use Xigemall\LaravelSso\Services\Curl;
 
 class CurlServiceProvider extends ServiceProvider
 {

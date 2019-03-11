@@ -2,8 +2,8 @@
 
 namespace Xigemall\LaravelSso;
 
-use Xigemall\LaravelSso\App\Services\OaGuard;
-use Xigemall\LaravelSso\App\Services\OaUserProvider;
+use Xigemall\LaravelSso\Services\OaGuard;
+use Xigemall\LaravelSso\Services\OaUserProvider;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
@@ -17,7 +17,7 @@ class LaravelSsoServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/sso.php' => config_path('sso.php'),
+            __DIR__ . '/../config/sso.php' => config_path('sso.php'),
         ]);
     }
 

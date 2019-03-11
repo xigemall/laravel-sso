@@ -11,8 +11,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Xigemall\\LaravelSso\\": "src/",
-            "Xigemall\\LaravelSso\\App\\": "src/app"
+            "Xigemall\\LaravelSso\\": "src/"
         }
     },
     "extra": {
@@ -22,7 +21,7 @@
                 "Xigemall\\LaravelSso\\CurlServiceProvider"
             ],
             "aliases": {
-              "Curl": "Xigemall\\LaravelSso\\App\\Facades\\Curl"
+              "Curl": "Xigemall\\LaravelSso\\Facades\\Curl"
             }
         }
     }

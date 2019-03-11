@@ -6,7 +6,7 @@
  * Time: 16:10
  */
 
-namespace Xigemall\LaravelSso\App\Services;
+namespace Xigemall\LaravelSso\Services;
 
 
 use Illuminate\Contracts\Auth\Authenticatable;

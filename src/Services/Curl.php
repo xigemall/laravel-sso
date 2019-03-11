@@ -6,7 +6,7 @@
  * Time: 15:22
  */
 
-namespace Xigemall\LaravelSso\App\Services;
+namespace Xigemall\LaravelSso\Services;
 
 
 class Curl

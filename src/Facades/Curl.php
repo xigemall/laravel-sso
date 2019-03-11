@@ -6,7 +6,7 @@
  * Time: 16:56
  */
 
-namespace Xigemall\LaravelSso\App\Facades;
+namespace Xigemall\LaravelSso\Facades;
 
 
 use Illuminate\Support\Facades\Facade;

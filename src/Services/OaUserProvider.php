@@ -6,12 +6,12 @@
  * Time: 14:21
  */
 
-namespace Xigemall\LaravelSso\App\Services;
+namespace Xigemall\LaravelSso\Services;
 
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\UserProvider;
-use Xigemall\LaravelSso\App\Facades\Curl;
+use Xigemall\LaravelSso\Facades\Curl;
 
 class OaUserProvider implements UserProvider
 {

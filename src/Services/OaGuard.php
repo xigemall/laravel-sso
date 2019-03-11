@@ -6,7 +6,7 @@
  * Time: 14:10
  */
 
-namespace Xigemall\LaravelSso\App\Services;
+namespace Xigemall\LaravelSso\Services;
 
 
 use Illuminate\Auth\GuardHelpers;

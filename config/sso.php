@@ -7,7 +7,7 @@
  */
 return [
     // 单点登录地址
-    'url' => env('OA_URL', 'http://localhost'),
+    'url' => env('SSO_URL', 'http://localhost'),
 
     // 自增key (字段的名称) 默认id
     'increment_key' => 'staff_sn',

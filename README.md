@@ -6,7 +6,7 @@
 ## configure
 `php artisan vendor:publish --provider="Xigemall\LaravelSso\LaravelSsoServiceProvider"`
 
-##add to your config/auth.php
+## add to your config/auth.php
 ```php
 'guards' => [
     'api' => [

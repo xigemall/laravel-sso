@@ -21,7 +21,6 @@ class OaGuard implements Guard
 
     protected $provider;
     protected $request;
-    protected $user = null;
 
     protected $authorizationKey = 'Authorization';
 

@@ -28,12 +28,12 @@ class LaravelSsoServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        Auth::extend('oa', function ($app, $name, array $config) {
+        Auth::extend('sso', function ($app, $name, array $config) {
             // 返回一个 Illuminate\Contracts\Auth\Guard 实例...
             return new OaGuard(Auth::createUserProvider($config['provider']),$app->make('request'));
         });
 
-        Auth::provider('oa', function ($app, array $config) {
+        Auth::provider('sso', function ($app, array $config) {
             return new OaUserProvider();
         });
     }

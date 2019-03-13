@@ -31,22 +31,6 @@ class OaGuard implements Guard
     }
 
     /**
-     * @return bool
-     */
-    public function check()
-    {
-        if (!$this->getToken()) {
-            return false;
-        }
-        return true;
-    }
-
-    public function guest()
-    {
-        return true;
-    }
-
-    /**
      * @return Authenticatable|null
      */
     public function user()
@@ -55,7 +39,9 @@ class OaGuard implements Guard
             return $this->user;
         }
         $token = $this->getToken();
-        $this->user = $this->provider->retrieveByCredentials([$this->authorizationKey => $token]);
+        if ($token) {
+            $this->user = $this->provider->retrieveByCredentials([$this->authorizationKey => $token]);
+        }
         return $this->user;
     }
 
@@ -63,11 +49,6 @@ class OaGuard implements Guard
     public function validate(array $credentials = [])
     {
         return true;
-    }
-
-    public function setUser(Authenticatable $user)
-    {
-        // TODO: Implement setUser() method.
     }
 
     /**

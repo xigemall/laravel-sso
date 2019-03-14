@@ -12,6 +12,7 @@ class CurlServiceProvider extends ServiceProvider
      * @var bool
      */
     protected $defer = true;
+
     /**
      * Bootstrap the application services.
      *
@@ -29,7 +30,7 @@ class CurlServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('curl',Curl::class);
+        $this->app->bind('curl', Curl::class);
     }
 
     /**
@@ -38,6 +39,6 @@ class CurlServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-       return ['curl'];
+        return ['curl'];
     }
 }

@@ -8,6 +8,7 @@
 
 namespace Xigemall\LaravelSso\Services;
 
+use Illuminate\Support\Facades\Auth;
 
 class Curl
 {
@@ -22,6 +23,12 @@ class Curl
         curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($this->ch, CURLOPT_HEADER, false);
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, false);
+        // 请求header添加Authorization
+        if (Auth::check()) {
+            $authorization = request()->header('Authorization');
+            $authorizationHeader = ['Authorization' => $authorization];
+            $this->setHeader($authorizationHeader);
+        }
     }
 
     /**
